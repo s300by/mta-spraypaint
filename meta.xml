@@ -1,0 +1,34 @@
+<meta>
+    <info author="Sc00by" name="spraypaint" version="1.1.0" type="script"
+          description="Graffiti system - spray walls with a spray can, wipe them off with a cloth" />
+
+    <script src="shared/config.lua" type="shared" cache="false" />
+    <script src="shared/utils.lua"  type="shared" cache="false" />
+
+    <script src="client/c_notify.lua"     type="client" cache="false" />
+    <script src="client/c_boneattach.lua" type="client" cache="false" />
+    <script src="client/c_aim.lua"        type="client" cache="false" />
+    <script src="client/c_canvas.lua"     type="client" cache="false" />
+    <script src="client/c_render.lua"     type="client" cache="false" />
+    <script src="client/c_hud.lua"        type="client" cache="false" />
+    <script src="client/c_editor.lua"     type="client" cache="false" />
+    <script src="client/c_paint.lua"      type="client" cache="false" />
+    <script src="client/c_eraser.lua"     type="client" cache="false" />
+    <script src="client/c_main.lua"       type="client" cache="false" />
+    <script src="client/c_admin_overlay.lua" type="client" cache="false" />
+
+    <script src="server/s_db.lua"          type="server" />
+    <script src="server/s_integration.lua" type="server" />
+    <script src="server/s_main.lua"        type="server" />
+    <script src="server/s_admin.lua"       type="server" />
+
+    <export function="Spray_delete" type="server" />
+    <export function="Spray_getAll" type="server" />
+
+    <!-- Needed for the optional Discord webhook in Config.DiscordWebhook. -->
+    <aclrequest>
+        <right name="function.fetchRemote" access="true"></right>
+    </aclrequest>
+
+    <min_mta_version client="1.5.8-9.20704" server="1.5.8-9.20704" />
+</meta>
